@@ -1,0 +1,26 @@
+{
+  "name": "hts-sasolburg",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ndzalo-Mathumbu/HTS-Sasolburg.git"
+  },
+  "keywords": [],
+  "author": "Ndzalo NK Mathumbu",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Ndzalo-Mathumbu/HTS-Sasolburg/issues"
+  },
+  "homepage": "https://github.com/Ndzalo-Mathumbu/HTS-Sasolburg#readme",
+  "devDependencies": {
+    "parcel": "^2.15.4"
+  }
+}
