@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+html {
+  font-size: 12px;
+}
+.header {
+  position: relative;
+  width: 100vw;
+  height: 95vh;
+}
+.__section1 {
+  position: relative;
+  width: 100vw;
+  height: 95vh; /* or 50vh for half screen */
+  /* background-color: black; */
+  overflow: hidden;
+  border-bottom: solid 1px red;
+}
+.hero__video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  inset: 0;
+  z-index: 1;
+}
+.navbar {
+  position: relative;
+  z-index: 10;
+  width: 100vw;
+  height: 20vh;
+
+  /* height: 30vh; */
+}
+.navbar:hover {
+  background: rgba(8, 8, 151, 0.237);
+  border-bottom: solid 3px red;
+  backdrop-filter: blur(3px);
+  box-shadow: 0 4px 30px rgba(8, 8, 151, 0.176);
+
+  transform: scale(1.01);
+  transition: all 0.5s ease-in-out;
+}
+.nav__links {
+  display: flex;
+  position: relative;
+  right: 4%;
+  /* padding-top: 1%; */
+  bottom: 68%;
+  list-style: none;
+  justify-self: flex-end;
+}
+
+.nav__item {
+  position: relative;
+  padding: 20px;
+  text-decoration: none;
+  font-size: clamp(2rem, 2vw, 2em);
+  color: white;
+}
+.nav__item:hover {
+  text-decoration: underline;
+  color: red;
+  transform: scale(1.01);
+  transition: all 0.5s ease;
+}
+.hts__logo {
+  position: relative;
+  width: 11%;
+  height: 103%;
+  left: 2%;
+  top: 1%;
+  /* padding-top: -100%; */
+}
+
+.img__log {
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+.msg__Typing {
+  position: relative;
+  top: 30%;
+  z-index: 10;
+  font-size: clamp(1.5rem, 4vw, 3rem);
+  color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0; /* important for animation */
+  opacity: 0.3;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 50%;
+  }
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: rgba(255, 255, 255, 0.75);
+  }
+}
+
+/* Define the keyframes for the typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.msg__Typing {
+  overflow: hidden; /* hides text beyond width */
+  white-space: wrap; /* keeps text on one line */
+  width: 0; /* start hidden */
+  animation: typing 7s steps(25) forwards;
+}
+
+.add__color {
+  position: relative;
+  display: flex;
+  text-align: center;
+  background: rgba(8, 8, 151, 0.369);
+  backdrop-filter: blur(5px);
+  box-shadow: 0 4px 30px rgba(8, 8, 151, 0.176);
+  transform: translateY(138%) scale(0.8);
+  border-radius: 5px;
+  padding: auto;
+  opacity: 1;
+  transition: all 0.5s ease-in-out;
+}
+.add__remove {
+  transform: scale(0.1);
+  opacity: 0;
+}
