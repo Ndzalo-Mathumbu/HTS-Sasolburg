@@ -1,5 +1,20 @@
+# Node dependencies
 node_modules/
+
+# Build output
 dist/
+
+# Parcel cache
+.parcel-cache/
+
+# Mac system files
 .DS_Store
+
+# Log files
 *.log
-.parcel-cache
+
+# Local videos folder (relative from repo root)
+video/
+
+# Optional: ignore all mp4 files anywhere in repo
+*.mp4
