@@ -37,7 +37,7 @@ html {
   /* height: 30vh; */
 }
 .navbar:hover {
-  background: rgba(8, 8, 151, 0.237);
+  background: rgba(8, 8, 151, 0.166);
   border-bottom: solid 3px red;
   backdrop-filter: blur(3px);
   box-shadow: 0 4px 30px rgba(8, 8, 151, 0.176);
@@ -71,7 +71,7 @@ html {
 .hts__logo {
   position: relative;
   width: 11%;
-  height: 103%;
+  height: 105%;
   left: 2%;
   top: 1%;
   /* padding-top: -100%; */
@@ -147,4 +147,41 @@ html {
 .add__remove {
   transform: scale(0.1);
   opacity: 0;
+}
+
+.semper__altius {
+  display: flex;
+  color: red;
+  font-family: "Dancing Script", cursive;
+
+  /* justify-content: center; */
+  height: 6vh;
+  border-bottom: solid 1px red;
+}
+
+.__semper--active {
+  transform: translateX(706%);
+  transition: all 5.5s ease-out;
+}
+.__semper {
+  position: relative;
+  padding-top: 1px;
+  right: 20%;
+  font-size: large;
+  font-weight: 500;
+  opacity: 0;
+}
+.__altius {
+  display: flex;
+  position: relative;
+  left: 80%;
+  padding-top: 1px;
+  font-size: large;
+  font-weight: 500;
+  opacity: 0;
+}
+
+.__altius--active {
+  transform: translateX(-426%);
+  transition: all 5.5s ease-out;
 }
