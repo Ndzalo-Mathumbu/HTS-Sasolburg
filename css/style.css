@@ -7,6 +7,9 @@
 html {
   font-size: 12px;
 }
+body::-webkit-scrollbar {
+  display: none;
+}
 .header {
   position: relative;
   width: 100vw;
@@ -18,7 +21,9 @@ html {
   height: 95vh; /* or 50vh for half screen */
   /* background-color: black; */
   overflow: hidden;
-  border-bottom: solid 1px red;
+  margin-bottom: 20px;
+  border-bottom: 3px solid;
+  border-image: linear-gradient(to top left, #0417a1, #ff0000) 2;
 }
 .hero__video {
   position: absolute;
@@ -156,6 +161,7 @@ html {
 
   /* justify-content: center; */
   height: 6vh;
+  border-top: solid 1px red;
   border-bottom: solid 1px red;
 }
 
@@ -184,4 +190,82 @@ html {
 .__altius--active {
   transform: translateX(-426%);
   transition: all 5.5s ease-out;
+}
+
+main {
+  width: 100%;
+  max-width: 1200px;
+  /* margin: 0 auto; */
+}
+
+.section__1 {
+  display: flex;
+  align-items: center;
+  /* text-align: start; */
+  width: 106.7%;
+  height: 455px;
+  margin-top: 20px;
+  overflow: hidden;
+  /* background-color: #007bff; */
+}
+
+.picture__1 {
+  position: relative;
+  bottom: 8%;
+  left: 14.6%;
+  width: 85%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover; /* Better than transform for responsive cropping */
+  display: block;
+}
+
+.section__1--text {
+  position: relative;
+  /* background-color: pink; */
+  color: rgb(55, 56, 61);
+  /* top: -10%; */
+  margin-top: 40px;
+  width: 290%;
+  height: 100%;
+  font-size: 2rem;
+  margin-left: 10px;
+  font-weight: bold;
+  padding: 3px;
+  line-height: 1.4;
+}
+.learn__more {
+  /* padding: 3px; */
+  margin-left: 8px;
+  margin-top: 25px;
+  font-size: 120%;
+  list-style: none;
+  text-decoration: none;
+  padding-bottom: 5px;
+  text-decoration: underline;
+  text-underline-offset: 10px;
+}
+.learn__more:visited {
+  color: red;
+}
+.highlight {
+  position: relative;
+  color: white;
+  margin: 3px;
+}
+
+.highlight::after {
+  display: block;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.7;
+  transform: scale(1.07, 1.05) skewX(-17deg);
+  background: linear-gradient(to top left, #0417a1 25%, #ff0000);
+
+  margin: 1px;
 }
