@@ -316,26 +316,89 @@ main {
   text-align: start;
   background-color: white;
   color: rgb(55, 56, 61);
-  font-size: 200%;
+  font-size: 150%;
+  line-height: 1.6;
   padding: 40px 40px 40px 40px;
-  margin-top: 50px;
+  margin-top: 90px;
   border-radius: 5px;
-  overflow: hidden;
+  /* overflow: hidden; */
   box-shadow: 1px 1px 5px 1px rgb(55, 56, 61); /* or any solid color */
 }
+.text__tab--container--1 {
+  /* position: absolute; */
+  opacity: 1;
+}
+.text__tab--container--2 {
+  /* position: absolute; */
+  opacity: 1;
+}
+.text__tab--container--3 {
+  /* position: absolute; */
+  opacity: 1;
+}
 
+.text__tab--container--2::first-line {
+  line-height: 3;
+  font-size: 115%;
+  font-weight: 600;
+  white-space: pre-wrap;
+  color: #ff0000;
+}
+.text__tab--container--3::first-line {
+  line-height: 3;
+  font-size: 113.9%;
+  font-weight: 600;
+  color: #ff0000;
+}
 .tabs__container--icon {
   display: flex;
   object-fit: cover;
   position: relative;
-  background-color: rgba(14, 232, 14, 0.742);
+  /* background-color: rgba(14, 232, 14, 0.662); */
+  background: linear-gradient(to top right, #0417a1 35%, #ff0000);
+
   border-radius: 50%;
   color: rgb(255, 255, 255);
-  width: 35%;
-  height: 35%;
-  padding: 18px;
+
+  backdrop-filter: blur(3px);
+  width: 30%;
+  height: 30%;
+  padding: 17px;
   margin-right: 10px;
   right: 2%;
-  bottom: 18%;
+  bottom: 10%;
   backdrop-filter: blur(10px);
+}
+.text__tab--container--1::first-line {
+  line-height: 3;
+  font-size: 113.9%;
+  font-weight: 600;
+  color: #ff0000;
+}
+
+.tab__btns {
+  display: flex;
+  position: absolute;
+  bottom: 89%;
+  left: 10%;
+  gap: 2em;
+}
+
+.btn__intab--container {
+  width: 18vw;
+  height: 10vh;
+  background-color: blue;
+  border: none;
+  border-radius: 40px;
+  color: white;
+  font-size: medium;
+  font-weight: 400;
+}
+.btn__intab--animation {
+  transform: translateY(-20%);
+  transition: all 0.5s ease;
+}
+.btn__intab--animationRemove {
+  transform: translateY(0);
+  transition: all 0.5s ease;
 }
