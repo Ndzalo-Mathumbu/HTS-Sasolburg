@@ -22,5 +22,8 @@
   "homepage": "https://github.com/Ndzalo-Mathumbu/HTS-Sasolburg#readme",
   "devDependencies": {
     "parcel": "^2.15.4"
+  },
+  "dependencies": {
+    "bootstrap-icons": "^1.13.1"
   }
 }

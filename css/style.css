@@ -278,6 +278,7 @@ main {
   width: 100vw;
 }
 .section__2 {
+  margin-bottom: 90px;
 }
 
 .section__2--heading {
@@ -350,11 +351,11 @@ main {
   font-weight: 600;
   color: #ff0000;
 }
-.tabs__container--icon {
-  display: flex;
+/* .tabs__container--icon {
+  display: none;
   object-fit: cover;
   position: relative;
-  /* background-color: rgba(14, 232, 14, 0.662); */
+  background-color: rgba(14, 232, 14, 0.662);
   background: linear-gradient(to top right, #0417a1 35%, #ff0000);
 
   border-radius: 50%;
@@ -368,7 +369,91 @@ main {
   right: 2%;
   bottom: 10%;
   backdrop-filter: blur(10px);
+} */
+
+.bi-trophy-wrapper {
+  display: none;
+  background: linear-gradient(to top right, #0416a194 35%, #ff0000);
+  padding: 10px;
+  border-radius: 50%;
+  /* display: inline-flex; */
+  align-items: center;
+  justify-content: center;
+  width: 26%; /* fixed size */
+  height: 31%;
+  backdrop-filter: blur(10px);
+  margin-right: 10px;
+  position: relative;
+  right: 2%;
+  bottom: 10%;
 }
+
+.bi-trophy {
+  display: none;
+  color: white;
+  position: relative;
+  left: 4%;
+  top: 3%;
+  font-size: 24px;
+  width: 50px;
+  height: 50px;
+}
+.bi-ubuntu-wrapper {
+  display: none;
+  background: linear-gradient(to top right, #0416a194 35%, #ff0000);
+  padding: 10px;
+  border-radius: 50%;
+  /* display: inline-flex; */
+  align-items: center;
+  justify-content: center;
+  width: 38%;
+  height: 31%;
+  backdrop-filter: blur(10px);
+  margin-right: 10px;
+  position: relative;
+  right: 2%;
+  bottom: 10%;
+}
+
+.bi-ubuntu {
+  display: none;
+  color: white;
+  position: relative;
+  left: 2%;
+  top: 8%;
+  font-size: 24px;
+  width: 50px;
+  height: 50px;
+}
+
+.bi-book-wrapper {
+  display: none;
+  background: linear-gradient(to top right, #0416a194 35%, #ff0000);
+  padding: 10px;
+  border-radius: 50%;
+  /* display: inline-flex; */
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+  height: 31%;
+  backdrop-filter: blur(10px);
+  margin-right: 10px;
+  position: relative;
+  right: 2%;
+  bottom: 10%;
+}
+
+.bi-book {
+  display: none;
+  color: white;
+  position: relative;
+  left: 2.6%;
+  top: 5%;
+  font-size: 24px;
+  width: 50px;
+  height: 50px;
+}
+
 .text__tab--container--1::first-line {
   line-height: 3;
   font-size: 113.9%;
@@ -401,4 +486,70 @@ main {
 .btn__intab--animationRemove {
   transform: translateY(0);
   transition: all 0.5s ease;
+}
+.__mission {
+  display: flex;
+  margin-top: 125px;
+  gap: 5em;
+}
+.__mission--titile {
+  display: flex;
+  position: relative;
+  bottom: 10%;
+  left: 2%;
+}
+.__mission--heading {
+  display: flex;
+  position: relative;
+  /* background-color: #0417a1; */
+  color: red;
+  padding-top: 10px;
+  top: 40%;
+  font-size: 2em;
+  font-weight: 510;
+}
+/* .__mission--mission {
+  display: flex;
+  position: relative;
+  color: red;
+  bottom: 5%;
+} */
+.bi-bulb-wrapper {
+  background: linear-gradient(to top right, #0416a194 35%, #ff0000);
+  padding: 10px;
+  border-radius: 50%;
+  /* display: inline-flex; */
+  align-items: center;
+  justify-content: center;
+  width: 8%; /* fixed size */
+  height: 11%;
+  backdrop-filter: blur(10px);
+
+  position: relative;
+  right: 2%;
+  bottom: 8%;
+}
+.bi-lightbulb {
+  color: white;
+  position: relative;
+  left: 9%;
+  top: 3%;
+  font-size: 24px;
+  width: 50px;
+  height: 50px;
+}
+.__mission--picture {
+  width: 43vw;
+  height: 43vh;
+  margin-left: 45px;
+  border-radius: 5;
+}
+
+.__mission--lists__items {
+  position: relative;
+  left: 5%;
+  bottom: 5%;
+  color: rgb(55, 56, 61);
+  font-size: 131%;
+  padding-bottom: 15px;
 }
