@@ -490,7 +490,7 @@ main {
 .__mission {
   display: flex;
   margin-top: 125px;
-  gap: 5em;
+  gap: 3em;
 }
 .__mission--titile {
   display: flex;
@@ -501,10 +501,12 @@ main {
 .__mission--heading {
   display: flex;
   position: relative;
+  bottom: 15px;
+  left: 1%;
   /* background-color: #0417a1; */
   color: red;
-  padding-top: 10px;
-  top: 40%;
+  padding-top: 7px;
+  margin-bottom: 10px;
   font-size: 2em;
   font-weight: 510;
 }
@@ -516,29 +518,32 @@ main {
 } */
 .bi-bulb-wrapper {
   background: linear-gradient(to top right, #0416a194 35%, #ff0000);
-  padding: 10px;
+  padding: 6px;
   border-radius: 50%;
   /* display: inline-flex; */
   align-items: center;
   justify-content: center;
-  width: 8%; /* fixed size */
-  height: 11%;
+  width: 4.8%; /* fixed size */
+  height: 5%;
   backdrop-filter: blur(10px);
+  /* margin-bottom: -3px; */
 
   position: relative;
-  right: 2%;
-  bottom: 8%;
+  right: 0.5%;
+  margin-top: -8px;
 }
 .bi-lightbulb {
   color: white;
   position: relative;
-  left: 9%;
-  top: 3%;
-  font-size: 24px;
+  left: 12%;
+  top: 5%;
+  font-size: 15px;
   width: 50px;
   height: 50px;
 }
 .__mission--picture {
+  box-shadow: 1px 1px 5px 1px rgb(55, 56, 61);
+
   width: 43vw;
   height: 43vh;
   margin-left: 45px;
@@ -547,9 +552,165 @@ main {
 
 .__mission--lists__items {
   position: relative;
-  left: 5%;
+  left: 3%;
   bottom: 5%;
   color: rgb(55, 56, 61);
-  font-size: 131%;
+  font-size: 125%;
   padding-bottom: 15px;
+  padding-right: 15px;
+}
+.__mission--lists--background {
+  box-shadow: 1px 1px 5px 1px rgb(55, 56, 61);
+  background-color: white;
+  border-radius: 5px;
+  padding: 5px;
+  width: 50.5vw;
+  padding-top: 10px;
+  position: relative;
+  bottom: 14%;
+  left: 2.5%;
+}
+.__vision {
+  display: flex;
+  position: relative;
+  margin-top: 35px;
+  gap: 1em;
+}
+.__vision--heading {
+  display: flex;
+  position: relative;
+  /* background-color: #0417a1; */
+  color: red;
+  /* padding-top: 10px; */
+  top: 2%;
+
+  font-size: 2em;
+  font-weight: 510;
+}
+.bi-graph-up-wrapper {
+  background: linear-gradient(to top right, #0416a194 35%, #ff0000);
+  padding: 17.5px;
+  border-radius: 50%;
+  display: flex; /* enable flexbox */
+  align-items: center;
+  justify-content: center;
+  width: 30%; /* fixed size */
+  height: 30%;
+  backdrop-filter: blur(10px);
+  position: relative;
+  right: 5%;
+  margin-top: -1px;
+}
+.bi-graph-up-arrow {
+  color: white;
+  font-size: 15px; /* adjust to fit */
+}
+
+.__vision--icon-text {
+  display: flex;
+  height: 5vh;
+  position: absolute;
+  left: 4%;
+  margin-top: -44px;
+}
+.__vision--text {
+  position: relative;
+  background-color: white;
+  box-shadow: 1px 1px 5px 1px rgb(55, 56, 61);
+  padding: 10px;
+  width: 53vw;
+  border-radius: 5;
+  line-height: 1.9;
+  color: rgb(55, 56, 61);
+  font-size: 131%;
+  padding-bottom: 20px;
+  right: -3.5%;
+}
+.__vision--picture {
+  box-shadow: 1px 1px 5px 1px rgb(55, 56, 61);
+  position: relative;
+  left: 3.6%;
+  width: 43vw;
+  height: 43vh;
+  margin-left: 45px;
+  border-radius: 5;
+}
+.__values {
+  display: flex;
+  margin-top: 80px;
+  gap: 3em;
+  position: relative;
+  left: 3.5%;
+}
+.__values--text {
+  box-shadow: 1px 1px 5px 1px rgb(55, 56, 61);
+  color: rgb(55, 56, 61);
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 10px;
+  height: 42.7vh;
+}
+.__values--lists {
+}
+.__values--lists--items {
+  position: relative;
+  left: 3%;
+  bottom: 5%;
+  color: rgb(55, 56, 61);
+  font-size: 125%;
+  padding-bottom: 15px;
+  padding-right: 15px;
+}
+.__values--picture {
+  box-shadow: 1px 1px 5px 1px rgb(55, 56, 61);
+  position: relative;
+  width: 43vw;
+  height: 43vh;
+  border-radius: 5;
+}
+
+.__value-icon {
+  display: flex;
+  position: absolute;
+  left: 45%;
+  bottom: 104%;
+  height: 5vh;
+}
+
+.value--text {
+  display: flex;
+  position: relative;
+  /* background-color: #0417a1; */
+  color: red;
+  /* padding-top: 10px; */
+  top: 2%;
+
+  font-size: 2em;
+  font-weight: 510;
+}
+.__value--Icon__wrapper {
+  background: linear-gradient(to top right, #0416a194 35%, #ff0000);
+  padding: 17.5px;
+  border-radius: 50%;
+  display: flex; /* enable flexbox */
+  align-items: center;
+  justify-content: center;
+  width: 29%; /* fixed size */
+  height: 30%;
+  backdrop-filter: blur(10px);
+  position: relative;
+  right: 5%;
+  margin-top: -1px;
+}
+.bi-people {
+  color: white;
+  font-size: 15px; /* adjust to fit */
+}
+
+.__vision--icon-text {
+  display: flex;
+  height: 5vh;
+  position: absolute;
+  left: 4%;
+  margin-top: -44px;
 }
