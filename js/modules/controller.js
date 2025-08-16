@@ -1,10 +1,9 @@
-import typingAnimation from "./view.js";
-import { tabButtonAnimation } from "./view.js";
-import { renderTabTexts } from "./view.js";
-
+import * as view from "./view.js";
 const init = function () {
-  typingAnimation();
-  tabButtonAnimation();
-  renderTabTexts();
+  // view.typingAnimation();
+  view.textAnimation();
+  view.tabButtonAnimation();
+  view.renderTabTexts();
+  view.modalWindow();
 };
 init();

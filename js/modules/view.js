@@ -17,8 +17,13 @@ const sportsIcon = document.querySelector(".bi-trophy");
 const bookWrapper = document.querySelector(".bi-book-wrapper");
 const ubuntuWrapper = document.querySelector(".bi-ubuntu-wrapper");
 const trophyWrapper = document.querySelector(".bi-trophy-wrapper");
-
-export default function () {
+const modalWindowOverlay = document.querySelector(".modal__window__overlay");
+const sectionItemModalWindow = document.querySelectorAll(
+  ".section__item__modal-window"
+);
+const quickJump = document.querySelector(".quick__jump");
+console.log(sectionItemModalWindow);
+export const textAnimation = function () {
   setTimeout(() => {
     autoTypeText.classList.add("msg__Typing");
   }, 6000);
@@ -39,7 +44,7 @@ export default function () {
     altius.style.fontSize = "32px";
     semper.style.fontSize = "32px";
   }, 24000);
-}
+};
 
 const tabButtons = [ubuntu, education, sports];
 
@@ -108,4 +113,20 @@ export const renderTabTexts = function () {
     // tabButtons[1].style.opacity = 1;
     tabs__containerTextInfo.insertAdjacentHTML("beforeend", markUpThird);
   });
+};
+export const modalWindow = function () {
+  quickJump.addEventListener("click", function () {
+    modalWindowOverlay.classList.add("modal__window__overlay-active");
+    setTimeout(() => {
+      modalWindowOverlay.classList.remove("modal__window__overlay-active");
+    }, 25000);
+  });
+  modalWindowOverlay.addEventListener("click", function () {
+    modalWindowOverlay.classList.remove("modal__window__overlay-active");
+  });
+  sectionItemModalWindow.forEach((list) =>
+    list.addEventListener("click", function () {
+      modalWindowOverlay.classList.remove("modal__window__overlay-active");
+    })
+  );
 };
