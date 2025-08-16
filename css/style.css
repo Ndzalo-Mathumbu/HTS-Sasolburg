@@ -792,7 +792,10 @@ main {
 }
 
 .footer__child1 {
+  display: flex;
+  align-items: center;
   background-color: #0417a1;
+  color: #ffffff;
   z-index: 1;
   margin-top: 80px;
   height: 50vh;
@@ -803,4 +806,55 @@ main {
   justify-content: center;
   background-color: #ff0000;
   color: #fff;
+}
+.hr__line--footer {
+  position: absolute;
+  left: 1.5%;
+  border: none;
+  border: 2 solid red;
+  height: 5vh;
+}
+.get-in-touch {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 30px;
+  list-style: none;
+  text-decoration: none;
+}
+.get-in-touch__title {
+  margin-bottom: 22px;
+  font-size: 2.5em;
+}
+.phone {
+  padding-top: 22px;
+  font-size: 1.5em;
+}
+.email1 {
+  padding-top: 22px;
+  font-size: 1.5em;
+}
+.email2 {
+  text-decoration: none;
+  color: #fff;
+}
+.email2:visited {
+  color: #ff0000;
+}
+.address {
+  padding-top: 22px;
+  font-size: 1.5em;
+}
+
+.bi-telephone {
+  position: absolute;
+  left: 0.5%;
+}
+.bi-envelope {
+  position: absolute;
+  left: 0.5%;
+}
+.bi-geo-alt {
+  position: absolute;
+  left: 0.5%;
 }
