@@ -22,7 +22,16 @@ const sectionItemModalWindow = document.querySelectorAll(
   ".section__item__modal-window"
 );
 const quickJump = document.querySelector(".quick__jump");
-console.log(sectionItemModalWindow);
+const __section1 = document.querySelector(".__section1");
+const semperAltius = document.querySelector(".semper__altius");
+const section__1FivePictures = document.querySelector(".section__1");
+const section__2Unity = document.querySelector(".section__2");
+const section__2Aspire = document.querySelector(".section__2--aspire");
+const footer__child1 = document.querySelector(".footer__child1");
+const heroVideo = document.querySelector(".hero__video");
+
+const navbar = document.querySelector(".navbar");
+console.log(sectionItemModalWindow, heroVideo, navbar);
 export const textAnimation = function () {
   setTimeout(() => {
     autoTypeText.classList.add("msg__Typing");
@@ -32,17 +41,6 @@ export const textAnimation = function () {
   }, 14000);
   setTimeout(() => {
     autoTypeText.classList.add("add__remove");
-  }, 24000);
-  /// semper__altius ///
-  setTimeout(() => {
-    semper.classList.add("__semper--active");
-    altius.classList.add("__altius--active");
-    altius.style.opacity = 1;
-    semper.style.opacity = 1;
-    altius.style.fontFamily = "'Dancing Script', cursive";
-    semper.style.fontFamily = "'Dancing Script', cursive";
-    altius.style.fontSize = "32px";
-    semper.style.fontSize = "32px";
   }, 24000);
 };
 
@@ -86,7 +84,7 @@ export const renderTabTexts = function () {
 
     ubuntuIcon.style.display = "flex";
     ubuntuWrapper.style.display = "inline-block";
-    tabs__containerTextInfo.style.position = "relative"; // or absolute,
+    tabs__containerTextInfo.style.position = "relative";
     tabs__containerTextInfo.insertAdjacentHTML("beforeend", markUp);
   });
   tabButtons[1].addEventListener("click", function () {
@@ -98,7 +96,7 @@ export const renderTabTexts = function () {
     ubuntuIcon.style.display = "none";
     educationIcon.style.display = "flex";
 
-    tabs__containerTextInfo.style.position = "relative"; // or absolute,
+    tabs__containerTextInfo.style.position = "relative";
     tabs__containerTextInfo.insertAdjacentHTML("beforeend", markUpSecond);
   });
 
@@ -129,4 +127,67 @@ export const modalWindow = function () {
       modalWindowOverlay.classList.remove("modal__window__overlay-active");
     })
   );
+};
+
+export const scrollAnimation = function () {
+  const sectionsArr = [
+    semperAltius,
+    section__1FivePictures,
+    section__2Unity,
+    section__2Aspire,
+    footer__child1,
+  ];
+
+  const options = {
+    root: null,
+    threshold: 0.2,
+  };
+  const obsever = new IntersectionObserver(function (entries, obsever) {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("renderSections");
+
+        /// semper__altius ///
+        setTimeout(() => {
+          semper.classList.add("__semper--active");
+          altius.classList.add("__altius--active");
+          altius.style.opacity = 1;
+          semper.style.opacity = 1;
+          altius.style.fontFamily = "'Dancing Script', cursive";
+          semper.style.fontFamily = "'Dancing Script', cursive";
+          altius.style.fontSize = "32px";
+          semper.style.fontSize = "32px";
+        }, 500);
+      }
+    });
+  }, options);
+
+  sectionsArr.forEach((section) => {
+    obsever.observe(section);
+  });
+};
+
+/* alert(
+  "If you prefer the navigation bar without a blurred background, click anywhere on it to make it clear."
+); */
+
+export const stickyNav = function () {
+  window.addEventListener("scroll", () => {
+    const rect = heroVideo.getBoundingClientRect();
+    const videoHeight = rect.height;
+
+    let visibleHeight = rect.bottom;
+    visibleHeight = Math.min(visibleHeight, videoHeight);
+    visibleHeight = Math.max(0, visibleHeight);
+
+    if (visibleHeight / videoHeight <= 0.22) {
+      navbar.classList.add("nav__active");
+    } else {
+      navbar.classList.remove("nav__active");
+    }
+  });
+
+  navbar.addEventListener("click", () => {
+    navbar.classList.add("nav__click");
+  });
 };

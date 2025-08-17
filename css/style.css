@@ -10,7 +10,7 @@ html {
 }
 body {
   background-color: #edededba;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 body::-webkit-scrollbar {
   display: none;
@@ -43,15 +43,31 @@ body::-webkit-scrollbar {
   z-index: 10;
   width: 100vw;
   height: 20vh;
-  position: fixed;
+  background-color: rgba(0, 0, 255, 0);
+  /* position: fixed; */
   /* height: 30vh; */
+  /* transform: translateY(-150px);
+  transition: all 2s ease-out; */
+}
+.nav__active {
+  transform: translateY(10px);
+  transform: scale(1.01);
+  background: rgba(8, 8, 151, 0.306);
+  backdrop-filter: blur(1.5px);
+  box-shadow: 0 4px 30px rgba(8, 8, 151, 0.153);
+  border-bottom: solid 2px red;
+  transition: all 0.4s ease-out;
+  position: fixed;
+}
+.nav__click {
+  background: rgba(8, 8, 151, 0.081);
+  backdrop-filter: blur(0);
 }
 .navbar:hover {
-  background: rgba(8, 8, 151, 0.166);
+  background: rgba(8, 8, 151, 0.233);
   border-bottom: solid 3px red;
   backdrop-filter: blur(3px);
   box-shadow: 0 4px 30px rgba(8, 8, 151, 0.176);
-
   transform: scale(1.01);
   transition: all 0.5s ease-in-out;
 }
@@ -164,11 +180,13 @@ body::-webkit-scrollbar {
   display: flex;
   color: red;
   font-family: "Dancing Script", cursive;
-
   /* justify-content: center; */
   height: 6vh;
   border-top: solid 1px red;
   border-bottom: solid 1px red;
+  opacity: 0;
+  transform: translateY(120px);
+  transition: all 0.5s ease-out;
 }
 
 .__semper--active {
@@ -176,7 +194,10 @@ body::-webkit-scrollbar {
   transition: all 5.5s ease-out;
 }
 .__semper {
+  display: flex;
   position: relative;
+  align-items: center;
+  justify-content: center;
   padding-top: 1px;
   right: 20%;
   font-size: large;
@@ -186,7 +207,10 @@ body::-webkit-scrollbar {
 .__altius {
   display: flex;
   position: relative;
-  left: 80%;
+  align-items: center;
+  justify-content: center;
+
+  left: 100%;
   padding-top: 1px;
   font-size: large;
   font-weight: 500;
@@ -194,7 +218,7 @@ body::-webkit-scrollbar {
 }
 
 .__altius--active {
-  transform: translateX(-426%);
+  transform: translateX(-645%);
   transition: all 5.5s ease-out;
 }
 
@@ -214,6 +238,9 @@ main {
   overflow: hidden;
   /* background-color: #007bff; */
   scroll-margin-top: 205px;
+  opacity: 0;
+  transform: translateY(120px);
+  transition: all 0.5s ease-out;
 }
 
 .picture__1 {
@@ -285,7 +312,16 @@ main {
 .section__2 {
   margin-bottom: 90px;
 }
-
+.section__2unity {
+  opacity: 0;
+  transform: translateY(120px);
+  transition: all 0.5s ease-out;
+}
+.section__2--aspire {
+  opacity: 0;
+  transform: translateY(120px);
+  transition: all 0.5s ease-out;
+}
 .section__2--heading {
 }
 .heading__1--unity {
@@ -800,6 +836,9 @@ main {
   z-index: 1;
   margin-top: 80px;
   height: 50vh;
+  opacity: 0;
+  transform: translateY(120px);
+  transition: all 0.5s ease-out;
 }
 .footer__child2 {
   display: flex;
@@ -998,4 +1037,9 @@ input[type="email"] {
   width: 120%;
   padding: 2px;
   height: auto;
+}
+
+.renderSections {
+  opacity: 1;
+  transform: translateY(0);
 }
