@@ -1,0 +1,71 @@
+.navbar {
+  position: relative;
+  z-index: 10;
+  width: 100vw;
+  height: 20vh;
+  background-color: rgba(0, 0, 255, 0);
+  /* position: fixed; */
+  /* height: 30vh; */
+  /* transform: translateY(-150px);
+  transition: all 2s ease-out; */
+}
+.nav__active {
+  transform: translateY(10px);
+  transform: scale(1.01);
+  background: rgba(8, 8, 151, 0.306);
+  backdrop-filter: blur(1.5px);
+  box-shadow: 0 4px 30px rgba(8, 8, 151, 0.153);
+  border-bottom: solid 2px red;
+  transition: all 0.4s ease-out;
+  position: fixed;
+}
+.nav__click {
+  background: rgba(8, 8, 151, 0.081);
+  backdrop-filter: blur(0);
+}
+.navbar:hover {
+  background: rgba(8, 8, 151, 0.233);
+  border-bottom: solid 3px red;
+  backdrop-filter: blur(3px);
+  box-shadow: 0 4px 30px rgba(8, 8, 151, 0.176);
+  transform: scale(1.01);
+  transition: all 0.5s ease-in-out;
+}
+.nav__links {
+  display: flex;
+  position: relative;
+  right: 1%;
+  /* padding-top: 1%; */
+  bottom: 68%;
+  list-style: none;
+  justify-self: flex-end;
+}
+
+.nav__item {
+  position: relative;
+  padding: 20px;
+  text-decoration: none;
+  /* font-size: clamp(2rem, 0.4vw, 2em); */
+  font-size: 1.7em;
+  color: white;
+}
+.nav__item:hover {
+  text-decoration: underline;
+  color: red;
+  transform: scale(1.01);
+  transition: all 0.5s ease;
+}
+.hts__logo {
+  position: relative;
+  width: 11%;
+  height: 105%;
+  left: 2%;
+  top: 1%;
+  /* padding-top: -100%; */
+}
+
+.img__log {
+  position: relative;
+  width: 0;
+  height: 0;
+}

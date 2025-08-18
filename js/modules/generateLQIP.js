@@ -3,7 +3,7 @@ import path from "path";
 import sharp from "sharp";
 
 // Define where your input (original) images are
-const imagesFolder = path.join(".", "img");
+const imagesFolder = path.join("img");
 
 // Define where to save low-quality versions
 const outputFolder = path.join(".", "img", "img low quality pics");

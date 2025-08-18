@@ -1,3 +1,4 @@
+"use strict";
 import * as view from "./view.js";
 
 const init = function () {
@@ -8,6 +9,6 @@ const init = function () {
   view.tabButtonAnimation();
   view.renderTabTexts();
   view.modalWindow();
-  view.lazyLoadPictures();
+  view.removePictureBlur();
 };
 init();

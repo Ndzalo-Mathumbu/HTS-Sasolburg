@@ -1,3 +1,4 @@
+"use strict";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
 const autoTypeText = document.querySelector(".welcome__msg");
@@ -31,8 +32,8 @@ const footer__child1 = document.querySelector(".footer__child1");
 const heroVideo = document.querySelector(".hero__video");
 
 const navbar = document.querySelector(".navbar");
-// const HDimg = document.querySelectorAll(".lq__image");
-const HDimg = document.querySelectorAll("img[data-src]");
+const HDimg = document.querySelectorAll(".lq__image");
+// const HDimg = document.querySelectorAll("img[data-src]");
 
 console.log(sectionItemModalWindow, heroVideo, navbar);
 export const textAnimation = function () {
@@ -160,6 +161,7 @@ export const scrollAnimation = function () {
           semper.style.fontFamily = "'Dancing Script', cursive";
           altius.style.fontSize = "32px";
           semper.style.fontSize = "32px";
+          semperAltius.style.backgroundColor = "#edededba";
         }, 500);
       }
     });
@@ -195,39 +197,24 @@ export const stickyNav = function () {
   });
 };
 
-export const lazyLoadPictures = function () {
-  // Load the HD image when needed
-  const loadHDpics = function (entry, observer) {
-    const img = entry.target;
+export const removePictureBlur = function () {
+  const imgs = document.querySelectorAll(".lazy-blur");
 
-    // Swap low-quality with HD
-    img.src = img.dataset.src;
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          // triggers when any part is visible
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target); // stop observing after triggering
+        }
+      });
+    },
+    {
+      root: null,
+      threshold: 0.85, // triggers when 50% of image is in viewport
+    }
+  );
 
-    // When HD loads, remove blur
-    img.addEventListener("load", () => {
-      img.classList.add("lazy-img__removeBlur");
-    });
-
-    observer.unobserve(img); // Stop watching once loaded
-  };
-
-  const options = {
-    root: null,
-    threshold: 0.1, // 100% of image should be visible before full reveal
-  };
-
-  const observer = new IntersectionObserver(function (entries, observer) {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        loadHDpics(entry, observer);
-      }
-    });
-  }, options);
-
-  // Grab all images that have a data-src attribute
-
-  HDimg.forEach((img) => {
-    img.classList.add("lazy-img"); // Start blurred
-    observer.observe(img);
-  });
+  imgs.forEach((img) => observer.observe(img));
 };
