@@ -31,6 +31,9 @@ const footer__child1 = document.querySelector(".footer__child1");
 const heroVideo = document.querySelector(".hero__video");
 
 const navbar = document.querySelector(".navbar");
+// const HDimg = document.querySelectorAll(".lq__image");
+const HDimg = document.querySelectorAll("img[data-src]");
+
 console.log(sectionItemModalWindow, heroVideo, navbar);
 export const textAnimation = function () {
   setTimeout(() => {
@@ -189,5 +192,42 @@ export const stickyNav = function () {
 
   navbar.addEventListener("click", () => {
     navbar.classList.add("nav__click");
+  });
+};
+
+export const lazyLoadPictures = function () {
+  // Load the HD image when needed
+  const loadHDpics = function (entry, observer) {
+    const img = entry.target;
+
+    // Swap low-quality with HD
+    img.src = img.dataset.src;
+
+    // When HD loads, remove blur
+    img.addEventListener("load", () => {
+      img.classList.add("lazy-img__removeBlur");
+    });
+
+    observer.unobserve(img); // Stop watching once loaded
+  };
+
+  const options = {
+    root: null,
+    threshold: 0.1, // 100% of image should be visible before full reveal
+  };
+
+  const observer = new IntersectionObserver(function (entries, observer) {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        loadHDpics(entry, observer);
+      }
+    });
+  }, options);
+
+  // Grab all images that have a data-src attribute
+
+  HDimg.forEach((img) => {
+    img.classList.add("lazy-img"); // Start blurred
+    observer.observe(img);
   });
 };

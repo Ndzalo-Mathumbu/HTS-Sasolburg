@@ -252,6 +252,12 @@ main {
   aspect-ratio: 16 / 9;
   object-fit: cover;
   display: block;
+  /* filter: blur(15px); */
+}
+
+.picture__1--unblurHDpic {
+  filter: blur(15px);
+  transition: filter 0.5s ease-out;
 }
 
 .section__1--text {
@@ -1042,4 +1048,13 @@ input[type="email"] {
 .renderSections {
   opacity: 1;
   transform: translateY(0);
+}
+
+.lazy-img {
+  filter: blur(15px);
+  transition: filter 1s ease-out;
+}
+.lazy-img__removeBlur {
+  filter: blur(0);
+  transition: filter 3s ease-out;
 }
